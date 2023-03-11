@@ -1,12 +1,12 @@
 import { Button, Heading, MultiStep, Text } from '@ignite-ui/react'
-import { signIn, useSession } from 'next-auth/react'
+import { signIn } from 'next-auth/react'
 import { ArrowRight } from 'phosphor-react'
 
 import { Container, Header } from '../styles'
 import { ConnectBox, ConnectItem } from './styles'
 
 export default function ConnectCalendar() {
-  const session = useSession()
+  // const session = useSession()
 
   // async function handleRegister(data: RegisterFormData) {
 
@@ -36,10 +36,6 @@ export default function ConnectCalendar() {
             <ArrowRight />
           </Button>
         </ConnectItem>
-
-        <pre>
-          <Text>{JSON.stringify(session.data)}</Text>
-        </pre>
 
         <Button type="submit">
           Próximo passo
