@@ -13,9 +13,6 @@ export default async function handler(
 
   const { name, username } = req.body
 
-  if (typeof username !== 'string')
-    return res.status(404).send('invalid username')
-
   const userExists = await prisma.user.findUnique({
     where: {
       username,
